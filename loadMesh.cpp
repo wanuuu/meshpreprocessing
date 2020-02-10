@@ -27,7 +27,7 @@ face::face()
     isbaseface = false;
 
 }
-
+//https://www.cnblogs.com/charlee44/p/10744158.html
 void face::getNormal(vector<vertice> vert)
 {
 
@@ -50,7 +50,8 @@ void face::getNormal(vector<vertice> vert)
     vector2[1] = p2[1]-p1[1];
     vector2[2] = p2[2]-p1[2];
 
-    normal = cross(vector1,vector2);
+    double *normalvector = cross(vector1,vector2);
+    cout<<normalvector<<endl;
     //cout<<normal<<endl;  
  
 }
