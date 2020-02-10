@@ -5,6 +5,7 @@
 #include<vector>
 #include<string.h>
 
+
 using namespace std;
 
 struct vertice{
@@ -19,11 +20,13 @@ class face{
         vector<vertice> vertex;
         vector<int> vtindex; 
         vector<int> neighbor;
-        double normal[3];
+        double *normal;
+        double area;
         bool isflat;
         bool isbaseface ;
 
-        void getNormal();
+        void getNormal(vector<vertice> vert);
+        void getArea(vector<vertice> vert);
 };
 
 class model{
