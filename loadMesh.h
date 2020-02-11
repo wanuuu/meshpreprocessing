@@ -20,7 +20,7 @@ class face{
         vector<vertice> vertex;
         vector<int> vtindex; 
         vector<int> neighbor;
-        double *normal;
+        double normal[3];
         double area;
         bool isflat;
         bool isbaseface ;
@@ -34,12 +34,14 @@ class model{
     public:
         model();
         vector<face> faces;
-        void loadmesh(string filename);
+        vector<int> baseface;
         int vertex_n,face_n;
+
+        void loadmesh(string filename);
 
 
 };
 
-
+extern void cross(double[],double[],double[]);
 
 #endif
