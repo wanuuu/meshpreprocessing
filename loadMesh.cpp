@@ -118,13 +118,13 @@ void face::getArea(vector<vertice> vert)
 vector<int> getbaseface(vector<face> faces)
 {
     vector<int> basetmp;
-    double minZ = NULL;
+    double minZ = -100;
 
     for(int i = 0;i<faces.size();i++)
     {
         for(int j = 0;j<faces.at(i).vertex.size();j++)
         {
-            if(minZ == NULL)
+            if(minZ == -100)
             {
                 minZ = faces.at(i).vertex.at(j).z;
             }
