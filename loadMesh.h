@@ -33,6 +33,7 @@ class model{
 
     public:
         model();
+        vector<vertice> vertex;
         vector<face> faces;
         vector<int> baseface;
         int vertex_n,face_n;

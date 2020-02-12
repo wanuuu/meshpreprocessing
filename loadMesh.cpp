@@ -196,6 +196,7 @@ void model::loadmesh(string filename)
                 v.y = stod(lines[2]);
                 v.z = stod(lines[3]);
                 vtmp.push_back(v);
+                vertex.push_back(v);
             }
             else if(lines.at(0)=="f")
             {
