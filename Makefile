@@ -12,6 +12,10 @@ main.o: main.cpp loadMesh.h
 	$(CC) -I$(INCLUDE) $(CXXFLAGS) -c main.cpp
 loadMesh.o : loadMesh.cpp loadMesh.h
 	$(CC) -I$(INCLUDE) $(CXXFLAGS) -c loadMesh.cpp
+
+meshfimplify.o meshfimplify.cpp meshfimplify.h
+	$(CC) -I$(INCLUDE) $(CXXFLAGS) -c meshfimplify.cpp
+
 clean:
-	rm -f main.out main.o loadMesh.o
+	rm -f main.out main.o loadMesh.o meshfimplify.o
 
