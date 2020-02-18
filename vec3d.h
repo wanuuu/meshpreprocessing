@@ -7,8 +7,8 @@ class Vec3d
 {
     public:
 
+        
         Vec3d(double X = 0,double Y = 0, double Z = 0):x(X),y(Y),z(Z){};
-        ~Vec3d();
         double x,y,z;
 
         friend Vec3d operator + (const Vec3d&,const Vec3d&);
