@@ -1,6 +1,7 @@
 #include <iostream>
 #include <unistd.h>
-#include "loadMesh.h"
+#include "model.h"
+
 
 using namespace std;
 
@@ -19,6 +20,10 @@ int main(int argc, char * argv[])
     
     model meshmodel;
     meshmodel.loadmesh(filename);
+
+    cout<<meshmodel.nVectex<<" "<<meshmodel.nFace<<endl;
+    cout<<meshmodel.faces.at(0).area<<endl;
+    cout<<meshmodel.faces.at(0).normal.x<<" "<<meshmodel.faces.at(0).normal.y<<" "<< meshmodel.faces.at(0).normal.z<<endl;
 
     return 0;
 }
