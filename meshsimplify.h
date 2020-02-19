@@ -2,7 +2,7 @@
 #include<algorithm>
 #include<math.h>
 #include<vector>
-#include "loadMesh.h"
+#include "model.h"
 
 
 using namespace std;

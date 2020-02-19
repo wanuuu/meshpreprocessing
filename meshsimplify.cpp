@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <math.h>
 #include <vector>
-#include "loadMesh.h"
+#include "model.h"
 #include "meshsimplify.h"
 
 using namespace std;
@@ -44,6 +44,13 @@ void MeshSimplify::startSimplify(model ori,model newMesh,Camera cam,double dis2b
     fpl = round(2 * dis2building * tan((cam.Fov/cam.Ratio)/2));
 
     camFootprintArea = fpw * fpl;
+
+}
+//合併兩多邊形
+void mergePolygon(face f1,face f2)
+{
+
+    
 
 }
 void MeshSimplify::output(model newMesh,string file )
