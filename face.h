@@ -16,7 +16,6 @@ class vertice
 
         vertice();
         vertice(double,double,double);
-        int id;
         Vec3d pos;
 };
 class face
