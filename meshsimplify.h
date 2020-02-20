@@ -1,33 +1,30 @@
+#ifndef MESHSIMPLIFY_H
+#define MESHSIMPLIFY_H
+
 #include<iostream>
 #include<algorithm>
 #include<math.h>
 #include<vector>
+#include "face.h"
 #include "model.h"
+#include "camera.h"
 
 
 using namespace std;
 
-class MeshSimplify
+
+class Meshsimplify
 {
     public:
 
-        MeshSimplify(void);
-        ~MeshSimplify(void);
+        Meshsimplify(void);
+        ~Meshsimplify(void);
 
         void startSimplify(model,model,Camera,double);//ori,new,camera,dis2building
         void output(model,string);
 };
 
-class Camera
-{
-    public:
 
-        Camera();
-        double Focal;
-        double Ratio;
-        double Fov;
+void mergePolygon(face f1,face f2);
 
-        void setCamera(double,double,double);
-
-
-};
+#endif
