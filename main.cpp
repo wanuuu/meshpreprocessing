@@ -1,6 +1,7 @@
 #include <iostream>
 #include <unistd.h>
 #include "model.h"
+#include "meshsimplify.h"
 
 
 using namespace std;
@@ -21,9 +22,8 @@ int main(int argc, char * argv[])
     model meshmodel;
     meshmodel.loadmesh(filename);
 
-    cout<<meshmodel.nVectex<<" "<<meshmodel.nFace<<endl;
-    cout<<meshmodel.faces.at(0).area<<endl;
-    cout<<meshmodel.faces.at(0).normal.x<<" "<<meshmodel.faces.at(0).normal.y<<" "<< meshmodel.faces.at(0).normal.z<<endl;
 
+    mergePolygon(meshmodel.faces.at(2),meshmodel.faces.at(3));
+    
     return 0;
 }
