@@ -93,7 +93,7 @@ void model::loadmesh(string filename)
 
     string line;
     vector<vertice> vtmp;
-    int i = 0;
+
     cout<<"start reading file ..."<<endl;
 
     while (getline(modelfile,line))
@@ -119,8 +119,6 @@ void model::loadmesh(string filename)
             {    
                 //cout<<"vertice .."<<endl;
                 vertice v(stod(lines[1]),stod(lines[2]),stod(lines[3]));
-                v.id = i+1;
-                i++;
                 vtmp.push_back(v);
                 vertex.push_back(v);
 
