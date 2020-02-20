@@ -19,7 +19,8 @@ class Vec3d
         friend Vec3d operator - (const Vec3d&,const double&);
         friend Vec3d operator * (const Vec3d&,const double&);
         friend Vec3d operator / (const Vec3d&,const double&);
-
+        friend bool operator == (const Vec3d&,const Vec3d&);
+        friend bool operator <(const Vec3d&,const Vec3d&);
         Vec3d getCrossVec(const Vec3d&);
         double getDotVec(const Vec3d&);
 

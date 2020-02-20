@@ -1,4 +1,6 @@
 #include "vec3d.h"
+#include <iostream>
+using namespace std;
 
 Vec3d operator +(const Vec3d& A,const Vec3d& B)
 {
@@ -38,6 +40,25 @@ Vec3d operator *(const Vec3d& A,const double& t)
 Vec3d operator /(const Vec3d& A,const double& t)
 {
     return Vec3d( A.x / t,A.y / t,A.z / t);
+}
+
+bool operator == (const Vec3d& A,const Vec3d& B)
+{
+    if(A.x == B.x && A.y ==B.y && A.z == B.z)
+    {
+        return true;
+    }
+    return false;
+    
+}
+
+bool operator <(const Vec3d& A,const Vec3d& B)
+{
+    if(A.x<B.x && A.y<B.y && A.z<B.z)
+    {
+        return true;
+    }
+    return false;
 }
 
 Vec3d Vec3d::getCrossVec(const Vec3d& A)
