@@ -109,6 +109,8 @@ void mergePolygon(face f1,face f2)
     points = removeShared(v_uni,v_inter);
 
     //對 x,y,z 排序
+    //先排y
+    //再排Ｘ
 }
 void Meshsimplify::output(model newMesh,string file )
 {
